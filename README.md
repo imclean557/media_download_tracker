@@ -1,6 +1,6 @@
 # Media Download Tracker
 
-Media Download Tracker logs file downloads via the [Media Entity Download](/project/media_entity_download) route.
+Media Download Tracker logs file downloads via the [Media Entity Download](https://www.drupal.org/project/media_entity_download) route.
 
 ### Features
 
