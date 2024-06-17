@@ -25,8 +25,8 @@ Export as a CSV file to process the results externally.
 
 ### Additional Requirements
 
-[Media Entity Download](/project/media_entity_download)
+[Media Entity Download](https://www.drupal.org/project/media_entity_download)
 
 ### Similar projects
 
-[Media Entity Download Count](/project/media_entity_download_count) counts how many times the media item is downloaded and stores the result within the entity itself.
+[Media Entity Download Count](https://www.drupal.org/project/media_entity_download_count) counts how many times the media item is downloaded and stores the result within the entity itself.
