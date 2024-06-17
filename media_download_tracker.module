@@ -1,0 +1,118 @@
+<?php
+
+/**
+ * Implements hook_views_data().
+ */
+function media_download_tracker_views_data() {
+  $data = [];
+
+  // Define the base table.
+  $data['media_download_tracker'] = [
+    'table' => [
+      'group' => t('Media Download Tracker'),
+      'base' => [
+        'field' => 'id',
+        'title' => t('Media Download Tracker'),
+        'help' => t('Logs of media downloads.'),
+      ],
+    ],
+  ];
+
+  // Define the table fields.
+  $data['media_download_tracker']['id'] = [
+    'title' => t('ID'),
+    'help' => t('The primary identifier for the log entry.'),
+    'field' => [
+      'id' => 'numeric',
+    ],
+  ];
+
+  $data['media_download_tracker']['media_id'] = [
+    'title' => t('Media ID'),
+    'help' => t('The ID of the downloaded media entity.'),
+    'field' => [
+      'id' => 'numeric',
+    ],
+    'filter' => [
+      'id' => 'numeric',
+    ],
+    'relationship' => [
+      'title' => t('Media'),
+      'help' => t('The media entity associated with the download.'),
+      'base' => 'media_field_data',
+      'base field' => 'mid',
+      'relationship field' => 'media_id',
+      'id' => 'standard',
+    ],
+  ];
+
+  $data['media_download_tracker']['timestamp'] = [
+    'title' => t('Timestamp'),
+    'help' => t('The time when the media was downloaded.'),
+    'field' => [
+      'id' => 'date', // Change field type to 'date'
+      'click sortable' => TRUE,
+      'default_formatter' => 'timestamp', // Use 'timestamp' formatter
+    ],
+    'sort' => [
+      'id' => 'standard',
+    ],
+    'filter' => [
+      'id' => 'date',
+    ],
+  ];;
+
+  $data['media_download_tracker']['uid'] = [
+    'title' => t('User ID'),
+    'help' => t('The ID of the user who downloaded the media.'),
+    'field' => [
+      'id' => 'numeric',
+    ],
+    'filter' => [
+      'id' => 'numeric',
+    ],
+    'relationship' => [
+      'title' => t('User'),
+      'help' => t('The user who downloaded the media.'),
+      'base' => 'users_field_data',
+      'base field' => 'uid',
+      'relationship field' => 'uid',
+      'id' => 'standard',
+    ],
+  ];
+
+  $data['media_download_tracker']['requested_url'] = [
+    'title' => t('Requested URL'),
+    'help' => t('The URL from which the media was downloaded.'),
+    'field' => [
+      'id' => 'standard',
+    ],
+    'filter' => [
+      'id' => 'string',
+    ],
+  ];
+
+  $data['media_download_tracker']['referrer'] = [
+    'title' => t('Referrer'),
+    'help' => t('The referrer from which the download link was clicked.'),
+    'field' => [
+      'id' => 'standard',
+    ],
+    'filter' => [
+      'id' => 'string',
+    ],
+  ];
+
+  $data['media_download_tracker']['ip_address'] = [
+    'title' => t('IP Address'),
+    'help' => t('The IP address of the client.'),
+    'field' => [
+      'id' => 'standard',
+    ],
+    'filter' => [
+      'id' => 'string',
+    ],
+  ];
+
+  return $data;
+}

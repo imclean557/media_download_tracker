@@ -1,0 +1,7 @@
+services:
+  media_download_tracker.subscriber:
+    class: Drupal\media_download_tracker\EventSubscriber\MediaDownloadTrackerSubscriber
+    arguments: ['@database', '@datetime.time', '@current_user']
+    tags:
+      - { name: event_subscriber }
+
