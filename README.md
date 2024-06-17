@@ -1,3 +1,5 @@
+# Media Download Tracker
+
 Media Download Tracker logs file downloads via the [Media Entity Download](/project/media_entity_download) route.
 
 ### Features
