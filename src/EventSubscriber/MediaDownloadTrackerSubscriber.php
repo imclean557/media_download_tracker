@@ -3,10 +3,10 @@
 namespace Drupal\media_download_tracker\EventSubscriber;
 
 use Drupal\Core\Database\Connection;
-use Drupal\Core\Datetime\TimeInterface;
+use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
@@ -24,7 +24,7 @@ class MediaDownloadTrackerSubscriber implements EventSubscriberInterface {
   /**
    * The time service.
    *
-   * @var Drupal\Core\Datetime\TimeInterface
+   * @var Drupal\Component\Datetime\TimeInterface
    */
   protected $time;
 
@@ -40,7 +40,7 @@ class MediaDownloadTrackerSubscriber implements EventSubscriberInterface {
    *
    * @param \Drupal\Core\Database\Connection $database
    *   The database connection.
-   * @param \Drupal\Core\Datetime\TimeInterface $time
+   * @param \Drupal\Component\Datetime\TimeInterface $time
    *   The time service.
    * @param \Drupal\Core\Session\AccountProxyInterface $current_user
    *   The current user service.
@@ -62,7 +62,7 @@ class MediaDownloadTrackerSubscriber implements EventSubscriberInterface {
   /**
    * Function to run on the request event.
    */
-  public function onRequest(GetResponseEvent $event) {
+  public function onRequest(RequestEvent $event) {
     $request = $event->getRequest();
     // Check for Media Entity Download route.
     if ($request->attributes->get('_route') === 'media_entity_download.download') {
