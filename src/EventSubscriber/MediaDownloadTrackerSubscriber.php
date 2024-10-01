@@ -54,7 +54,7 @@ class MediaDownloadTrackerSubscriber implements EventSubscriberInterface {
   /**
    * Subscribe to Request event.
    */
-  public static function getSubscribedEvents() {
+  public static function getSubscribedEvents(): array {
     $events[KernelEvents::REQUEST][] = ['onRequest', 0];
     return $events;
   }

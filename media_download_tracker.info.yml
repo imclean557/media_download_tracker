@@ -1,7 +1,7 @@
 name: 'Media Download Tracker'
 type: module
 description: 'Tracks media downloads via Media Entity Download.'
-core_version_requirement: ^8 || ^9 || ^10
-package: Custom
+core_version_requirement: ^8 || ^9 || ^10 || ^11
+package: Media
 dependencies:
   - drupal:media_entity_download
