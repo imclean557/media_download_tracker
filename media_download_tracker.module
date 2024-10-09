@@ -50,9 +50,9 @@ function media_download_tracker_views_data() {
     'title' => t('Timestamp'),
     'help' => t('The time when the media was downloaded.'),
     'field' => [
-      'id' => 'date', // Change field type to 'date'
+      'id' => 'date',
       'click sortable' => TRUE,
-      'default_formatter' => 'timestamp', // Use 'timestamp' formatter
+      'default_formatter' => 'timestamp',
     ],
     'sort' => [
       'id' => 'standard',
