@@ -2,8 +2,8 @@
 
 namespace Drupal\media_download_tracker\EventSubscriber;
 
-use Drupal\Core\Database\Connection;
 use Drupal\Component\Datetime\TimeInterface;
+use Drupal\Core\Database\Connection;
 use Drupal\Core\Session\AccountProxyInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\RequestEvent;

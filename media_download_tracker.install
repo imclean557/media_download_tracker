@@ -1,6 +1,10 @@
 <?php
 
-use Drupal\Core\Database\Database;
+/**
+ * @file
+ * Defines the schema for the Media download tracker module.
+ */
+
 
 /**
  * Implements hook_schema().
