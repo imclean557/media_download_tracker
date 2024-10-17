@@ -15,6 +15,10 @@ This module records the following information:
 
 ### Post-Installation
 
+A default view is now provided.  Review `/admin/structure/views/view/media_download_tracker` and modify as required.
+
+**To set up your own view:**
+
 Add a View showing "Media Download Tracker" content and add the relevant fields.
 
 Add relationships to show other properties such as media name or username.
