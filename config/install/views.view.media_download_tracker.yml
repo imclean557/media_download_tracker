@@ -7,6 +7,9 @@ dependencies:
     - media
     - media_download_tracker
     - user
+  enforced:
+    module:
+      - media_download_tracker
 id: media_download_tracker
 label: 'Media Download Tracker'
 module: views

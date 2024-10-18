@@ -15,7 +15,7 @@ This module records the following information:
 
 ### Post-Installation
 
-A default view is now provided.  Review `/admin/structure/views/view/media_download_tracker` and modify as required.
+A basic view is provided.  Review `/admin/structure/views/view/media_download_tracker` and modify as required.
 
 **To set up your own view:**
 
